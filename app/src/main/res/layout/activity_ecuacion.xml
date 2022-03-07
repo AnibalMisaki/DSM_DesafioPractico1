@@ -8,129 +8,113 @@
     tools:layout_editor_absoluteX="-5dp"
     tools:layout_editor_absoluteY="40dp">
 
+    <TextView
+        android:id="@+id/x2"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="55dp"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/x1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/x1" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="348dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="66dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="22dp"
         android:contentDescription="@string/imgViewDescription"
-        app:layout_constraintBottom_toTopOf="@+id/lblA"
+        app:layout_constraintBottom_toTopOf="@+id/lblSubTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:srcCompat="@drawable/formula_general" />
 
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="89dp"
-        android:text="@string/lblTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="14dp"
+        android:text="Fromula general para ecuaciuones de segundo Grado"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lblSubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="486dp"
-        android:text="@string/lblSubTitle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="13dp"
+        android:text="Ingrese los componenetes de la fórmula"
+        app:layout_constraintBottom_toTopOf="@+id/componentA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/txtA"
+        android:id="@+id/componentA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="13dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/lblA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblA" />
+        android:hint="A"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/componentB"
+        app:layout_constraintStart_toStartOf="@+id/lblSubTitle"
+        app:layout_constraintTop_toBottomOf="@+id/lblSubTitle" />
 
     <EditText
-        android:id="@+id/txtC"
+        android:id="@+id/componentC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/lblC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblC" />
-
-    <TextView
-        android:id="@+id/lblB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="27dp"
-        android:text="@string/lblB"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblC"
-        app:layout_constraintEnd_toStartOf="@+id/txtB"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblA" />
-
-    <TextView
-        android:id="@+id/lblC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="324dp"
-        android:text="@string/lblC"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtC"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblB" />
-
-    <TextView
-        android:id="@+id/lblA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/lblA"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/lblB"
-        app:layout_constraintEnd_toStartOf="@+id/txtA"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:hint="C"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/resolveBtn"
+        app:layout_constraintStart_toStartOf="@+id/componentB"
+        app:layout_constraintTop_toBottomOf="@+id/componentB" />
 
     <EditText
-        android:id="@+id/txtB"
+        android:id="@+id/componentB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/lblB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblB" />
+        android:hint="B"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/componentC"
+        app:layout_constraintStart_toStartOf="@+id/componentA"
+        app:layout_constraintTop_toBottomOf="@+id/componentA" />
 
     <Button
-        android:id="@+id/btnSolve"
+        android:id="@+id/resolveBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="421dp"
-        android:layout_marginEnd="165dp"
-        android:text="@string/btnSolve"
+        android:layout_marginBottom="22dp"
+        android:onClick="resolveEcuation"
+        android:text="Resolver"
+        app:layout_constraintBottom_toTopOf="@+id/x1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/componentC" />
+
+    <TextView
+        android:id="@+id/x1"
+        android:layout_width="140dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="108dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/x2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resolveBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
