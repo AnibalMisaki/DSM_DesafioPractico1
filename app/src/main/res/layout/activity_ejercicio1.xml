@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sv.com.edu.udb.dsm.activities.Ejercicio1">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="56dp"
+        android:lineSpacingExtra="48sp"
+        android:text="Calculadora de comisiones"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtCodigo"
+        app:layout_constraintEnd_toEndOf="@+id/txtCodigo"
+        app:layout_constraintStart_toStartOf="@+id/txtCodigo"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Codigo Empleado"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtMes"
+        app:layout_constraintEnd_toEndOf="@+id/txtMes"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtMes"
+        android:layout_width="254dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Mes de Ventas"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtVentas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigo" />
+
+    <EditText
+        android:id="@+id/txtVentas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        android:ems="10"
+        android:hint="Total de ventas Realizadas"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/txtCodigo"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/txtMes" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="308dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="196dp"
+        android:onClick="calcular"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVentas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

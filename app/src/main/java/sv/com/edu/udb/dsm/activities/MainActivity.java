@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void viewExercise1(){
-        Intent i = new Intent(this, EcuacionActivity.class);
+        Intent i = new Intent(this, Ejercicio1.class);
         startActivity(i);
     }
 

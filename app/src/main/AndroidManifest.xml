@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaPractica">
         <activity
-            android:name="sv.com.edu.udb.dsm.activities.MainActivity" />
+            android:name="sv.com.edu.udb.dsm.activities.Ejercicio1Result" />
+        <activity
+            android:name="sv.com.edu.udb.dsm.activities.Ejercicio1" />
+        <activity android:name="sv.com.edu.udb.dsm.activities.MainActivity" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.EcuacionActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.LoginActivity"
             android:exported="true">
